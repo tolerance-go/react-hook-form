@@ -1,15 +1,14 @@
-
 # README Updater
 
-*A tool / script that generates  [` README.md `][README] .*
+_A tool / script that generates  [` README.md `][readme] ._
 
 <br>
 
 ## Description
 
-This script replaces markers in  [` docs/Template.md `][Template] <br>
+This script replaces markers in  [` docs/Template.md `][template] <br>
 with linked icons generated from the data found in <br>
-[` docs/Helpers.yaml `][Helpers]  and  [` docs/Sponsors.yaml `][Sponsors] .
+[` docs/Helpers.yaml `][helpers]  and  [` docs/Sponsors.yaml `][sponsors] .
 
 <br>
 <br>
@@ -30,29 +29,29 @@ A marker is placed at the start of a line.
 
 ### Types
 
--   `Sponsors`
+- `Sponsors`
 
-    *Generates icons for sponsors.*
+  _Generates icons for sponsors._
 
--   `Helpers`
+- `Helpers`
 
-    *Generates icons for helpers.*
+  _Generates icons for helpers._
 
 <br>
 <br>
 
 ## Requirements
 
-*Things you need if you run it manually.*
+_Things you need if you run it manually._
 
--   **[Deno]**
+- **[Deno]**
 
 <br>
 <br>
 
 ## Running
 
-*Manual execution of the tool.*
+_Manual execution of the tool._
 
 <br>
 
@@ -66,12 +65,10 @@ deno run                                    \
 
 <br>
 
-
 <!----------------------------------------------------------------------------->
 
-[Sponsors]: ../../docs/Sponsors.yaml
-[Template]: ../../docs/Template.md
-[Helpers]: ../../docs/Helpers.yaml
-[README]: ../../README.md
-
-[Deno]: https://deno.land/
+[sponsors]: ../../docs/Sponsors.yaml
+[template]: ../../docs/Template.md
+[helpers]: ../../docs/Helpers.yaml
+[readme]: ../../README.md
+[deno]: https://deno.land/

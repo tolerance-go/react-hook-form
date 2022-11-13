@@ -49,7 +49,7 @@ function App() {
   } = useForm();
 
   return (
-    <form onSubmit={handleSubmit(data => console.log(data))}>
+    <form onSubmit={handleSubmit((data) => console.log(data))}>
       <input {...register('firstName')} />
       <input {...register('lastName', { required: true })} />
       {errors.lastName && <p>Last name is required.</p>}
@@ -73,7 +73,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://wantedlyinc.com'
 />
-    <img
+<img
         width = 94
         src = 'https://images.opencollective.com/wantedly/d94e44e/logo/256.png'
     />
@@ -82,7 +82,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://underbelly.is'
 />
-    <img
+<img
         width = 94
         src = 'https://images.opencollective.com/underbelly/989a4a6/logo/256.png'
     />
@@ -91,7 +91,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://graphcms.com'
 />
-    <img
+<img
         width = 94
         src = 'https://avatars.githubusercontent.com/u/31031438'
     />
@@ -100,7 +100,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://kanamekey.com'
 />
-    <img
+<img
         width = 94
         src = 'https://images.opencollective.com/kaname/d15fd98/logo/256.png'
     />
@@ -109,7 +109,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://feathery.io'
 />
-    <img
+<img
         width = 94
         src = 'https://images.opencollective.com/feathery1/c29b0a1/logo/256.png'
     />
@@ -118,7 +118,7 @@ Thanks go to these kind and lovely sponsors!
     target = _blank
     href = 'https://getform.io'
 />
-    <img
+<img
         width = 94
         src = 'https://images.opencollective.com/getformio2/3c978c8/avatar/256.png'
     />

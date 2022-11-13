@@ -9,6 +9,7 @@
     "dist/__tests__"
   ],
   "scripts": {
+    "clean:node_modules": "rimraf node_modules",
     "clean": "rimraf dist",
     "prebuild": "yarn clean",
     "build": "yarn build:modern",

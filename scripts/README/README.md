@@ -1,14 +1,14 @@
 # README Updater
 
-_A tool / script that generates  [` README.md `][readme] ._
+_A tool / script that generates  [`README.md`][readme] ._
 
 <br>
 
 ## Description
 
-This script replaces markers in  [` docs/Template.md `][template] <br>
+This script replaces markers in  [`docs/Template.md`][template] <br>
 with linked icons generated from the data found in <br>
-[` docs/Helpers.yaml `][helpers]  and  [` docs/Sponsors.yaml `][sponsors] .
+[`docs/Helpers.yaml`][helpers]  and  [`docs/Sponsors.yaml`][sponsors] .
 
 <br>
 <br>

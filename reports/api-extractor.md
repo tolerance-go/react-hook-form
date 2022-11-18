@@ -66,37 +66,33 @@ export type ChangeHandler = (event: {
 }) => Promise<void | boolean>;
 
 // @public (undocumented)
-export type Control<
-  TFieldValues extends FieldValues = FieldValues,
-  TContext = any,
-> = {
-  _subjects: Subjects<TFieldValues>;
-  _removeUnmounted: Noop;
-  _names: Names;
-  _stateFlags: {
-    mount: boolean;
-    action: boolean;
-    watch: boolean;
-  };
-  _options: UseFormProps<TFieldValues, TContext>;
-  _getDirty: GetIsDirty;
-  _formState: FormState<TFieldValues>;
-  _updateValid: Noop;
-  _fields: FieldRefs;
-  _formValues: FieldValues;
-  _proxyFormState: ReadFormState;
-  _defaultValues: Partial<DefaultValues<TFieldValues>>;
-  _getWatch: WatchInternal<TFieldValues>;
-  _updateFieldArray: BatchFieldArrayUpdate;
-  _getFieldArray: <TFieldArrayValues>(
-    name: InternalFieldName,
-  ) => Partial<TFieldArrayValues>[];
-  _executeSchema: (names: InternalFieldName[]) => Promise<{
-    errors: FieldErrors;
-  }>;
-  register: UseFormRegister<TFieldValues>;
-  unregister: UseFormUnregister<TFieldValues>;
-  getFieldState: UseFormGetFieldState<TFieldValues>;
+export type Control<TFieldValues extends FieldValues = FieldValues, TContext = any> = {
+    _subjects: Subjects<TFieldValues>;
+    _removeUnmounted: Noop;
+    _focusError: Noop;
+    _names: Names;
+    _stateFlags: {
+        mount: boolean;
+        action: boolean;
+        watch: boolean;
+    };
+    _options: UseFormProps<TFieldValues, TContext>;
+    _getDirty: GetIsDirty;
+    _formState: FormState<TFieldValues>;
+    _updateValid: Noop;
+    _fields: FieldRefs;
+    _formValues: FieldValues;
+    _proxyFormState: ReadFormState;
+    _defaultValues: Partial<DefaultValues<TFieldValues>>;
+    _getWatch: WatchInternal<TFieldValues>;
+    _updateFieldArray: BatchFieldArrayUpdate;
+    _getFieldArray: <TFieldArrayValues>(name: InternalFieldName) => Partial<TFieldArrayValues>[];
+    _executeSchema: (names: InternalFieldName[]) => Promise<{
+        errors: FieldErrors;
+    }>;
+    register: UseFormRegister<TFieldValues>;
+    unregister: UseFormUnregister<TFieldValues>;
+    getFieldState: UseFormGetFieldState<TFieldValues>;
 };
 
 // @public
@@ -794,23 +790,14 @@ export type UseFieldArrayPrepend<
 ) => void;
 
 // @public (undocumented)
-export type UseFieldArrayProps<
-  TFieldValues extends FieldValues = FieldValues,
-  TFieldArrayName extends FieldArrayPath<TFieldValues> = FieldArrayPath<TFieldValues>,
-  TKeyName extends string = 'id',
-> = {
-  name: TFieldArrayName;
-  keyName?: TKeyName;
-  control?: Control<TFieldValues>;
-  rules?: {
-    validate?:
-      | Validate<FieldArray<TFieldValues, TFieldArrayName>[]>
-      | Record<string, Validate<FieldArray<TFieldValues, TFieldArrayName>>>;
-  } & Pick<
-    RegisterOptions<TFieldValues>,
-    'maxLength' | 'minLength' | 'required'
-  >;
-  shouldUnregister?: boolean;
+export type UseFieldArrayProps<TFieldValues extends FieldValues = FieldValues, TFieldArrayName extends FieldArrayPath<TFieldValues> = FieldArrayPath<TFieldValues>, TKeyName extends string = 'id'> = {
+    name: TFieldArrayName;
+    keyName?: TKeyName;
+    control?: Control<TFieldValues>;
+    rules?: {
+        validate?: Validate<FieldArray<TFieldValues, TFieldArrayName>[]> | Record<string, Validate<FieldArray<TFieldValues, TFieldArrayName>[]>>;
+    } & Pick<RegisterOptions<TFieldValues>, 'maxLength' | 'minLength' | 'required'>;
+    shouldUnregister?: boolean;
 };
 
 // @public

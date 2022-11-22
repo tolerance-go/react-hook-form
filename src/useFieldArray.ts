@@ -106,7 +106,8 @@ export function useFieldArray<
   props.rules &&
     (control as Control).register(
       name as FieldPath<TFieldValues>,
-      props.rules as RegisterOptions<TFieldValues>,
+      // build 类型报错，直接去掉类型 as 就不报错了
+      props.rules,
     );
 
   const callback = React.useCallback(
